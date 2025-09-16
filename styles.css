@@ -1,0 +1,151 @@
+:root {
+  --main-color: #4a291a;
+  --header-height: 50px;
+  --large-screen-content-width: 900px;
+  --small-screen-content-width: calc(100vw - 40px);
+}
+
+
+body {
+  margin: 0px;
+  color: #482703;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+}
+
+header {
+  position: sticky;
+  top: 0;
+}
+
+.head-and-foot {
+  background-color: var(--main-color);
+  color: white;
+  height: var(--header-height);
+  width: 100vw;
+}
+
+main {
+  margin-top: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav {
+  height: var(--header-height);
+}
+
+.nav-list {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
+  height: var(--header-height)
+}
+
+.nav-item {
+  float: left;
+  height: var(--header-height);
+}
+
+.nav-text {
+  margin-top: 0px;
+  margin-left: 0px;
+  font-size: 1.6rem;
+
+  display: flex;
+  flex-direction: row;
+}
+
+.nav-text > * {
+  cursor: default;
+  height: 100%;
+  padding-right: 10px;
+  padding-left: 10px;
+
+  display: flex;
+  align-items: center;
+}
+
+/* .nav-text > *:hover {
+  background-color: #371d00;
+}*/
+
+#logo {
+  height: var(--header-height);
+}
+
+.TOC {
+  display: none;
+}
+
+#progress-bar-container {
+  background-color: #fefaf6;
+  height: 40px;
+}
+
+#progress-bar {
+  /*background-color: #50d12c;
+  width: 0%;
+  height: 20px;*/
+
+  margin-left: -200px;
+  height: 40px;
+  width: 200px;
+}
+
+@media (min-width: 900px) {
+  main {
+    width: 900px;
+  }
+
+  #section-2-container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  #steam-diagram {
+    width: var(--large-screen-content-width);
+  }
+
+  #torch-lake-img {
+    width: 500px;
+  }
+
+  #american-locomotive-img {
+    width: var(--large-screen-content-width);
+  }
+}
+
+@media (max-width: 900px) {
+  main {
+    width: var(--small-screen-content-width);
+  }
+
+  #section-2-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #steam-diagram {
+    width: var(--small-screen-content-width);
+  }
+
+  #torch-lake-img {
+    width: var(--small-screen-content-width);
+  }
+
+  #american-locomotive-img {
+    width: var(--small-screen-content-width);
+  }
+
+}
