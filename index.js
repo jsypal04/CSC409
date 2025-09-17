@@ -4,8 +4,15 @@ window.addEventListener("scroll", () => {
   const scroll_height = document.documentElement.scrollHeight;
   const client_height = document.documentElement.clientHeight;
 
-  const position = 100 * window.scrollY / (scroll_height - client_height);
+  const progress_width = window.innerWidth + 200;
 
-  progress_bar.style.marginLeft = `calc(${position}% - 200px)`;
+  const scroll_percent = window.scrollY / (scroll_height - client_height);
+
+  console.log(progress_width);
+  console.log(scroll_percent);
+
+  console.log(scroll_percent * progress_width);
+
+  progress_bar.style.marginLeft = `calc(${scroll_percent * progress_width}px - 200px)`;
 
 })

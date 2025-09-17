@@ -1,5 +1,7 @@
 :root {
   --main-color: #4a291a;
+  --text-color: #482703;
+  --background-color: #fefaf6;
   --header-height: 50px;
   --large-screen-content-width: 900px;
   --small-screen-content-width: calc(100vw - 40px);
@@ -8,9 +10,13 @@
 
 body {
   margin: 0px;
-  color: #482703;
+  color: var(--text-color);
+  background-color: var(--background-color);
   font-family: "Roboto", sans-serif;
   font-size: 15px;
+
+  display: grid;
+  grid-template-rows: auto auto auto;
 }
 
 header {
@@ -19,7 +25,7 @@ header {
 }
 
 .head-and-foot {
-  background-color: var(--main-color);
+ background-color: var(--main-color);
   color: white;
   height: var(--header-height);
   width: 100vw;
@@ -89,7 +95,7 @@ nav {
 }
 
 #progress-bar-container {
-  background-color: #fefaf6;
+  background-color: var(--background-color);
   height: 40px;
 }
 
