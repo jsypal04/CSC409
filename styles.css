@@ -14,9 +14,7 @@ body {
   background-color: var(--background-color);
   font-family: "Roboto", sans-serif;
   font-size: 15px;
-
-  display: grid;
-  grid-template-rows: auto auto auto;
+  overflow-x: hidden;
 }
 
 header {
@@ -25,10 +23,11 @@ header {
 }
 
 .head-and-foot {
- background-color: var(--main-color);
+  background-color: var(--main-color);
   color: white;
   height: var(--header-height);
   width: 100vw;
+
 }
 
 main {
@@ -44,6 +43,15 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+#parallax-img {
+  position: fixed;
+  top: 100;
+  left: 0;
+
+  height: 100%;
+
 }
 
 nav {
