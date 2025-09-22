@@ -99,7 +99,23 @@ nav {
 }
 
 .TOC {
-  display: none;
+  position: absolute;
+  background-color: var(--background-color);
+}
+
+.TOC > li {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.TOC > li:hover {
+  background-color: lightgray;
+}
+
+.TOC > li > a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 18px;
 }
 
 #progress-bar-container {

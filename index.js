@@ -8,6 +8,19 @@ window.addEventListener("scroll", () => {
 
   const scroll_percent = window.scrollY / (scroll_height - client_height);
 
-  progress_bar.style.marginLeft = `calc(${scroll_percent * progress_width}px - 200px)`;
+  progress_bar.style.marginLeft = `${scroll_percent * progress_width - 200}px`;
+});
 
-})
+const contents = document.getElementById("contents");
+contents.addEventListener("click", () => {
+  const toc = document.getElementById("main-TOC");
+  if (toc.style.display === 'none') {
+    toc.style.display = 'block';
+  }
+  else if (toc.style.display === 'block') {
+    toc.style.display = 'none';
+  }
+  else {
+    console.log(toc.style.display, "THIS CASE SHOULD NEVER HAPPEN.");
+  }
+});
