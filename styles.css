@@ -101,11 +101,16 @@ nav {
 .TOC {
   position: absolute;
   background-color: var(--background-color);
+  box-shadow: 5px 5px 10px 0px lightgray;
+  padding: 0px;
+  margin: 0px;
 }
 
 .TOC > li {
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-right: 10px;
+  padding-left: 10px;
 }
 
 .TOC > li:hover {
