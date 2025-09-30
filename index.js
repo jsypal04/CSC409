@@ -42,3 +42,21 @@ document.addEventListener("click", (event) => {
     toc.style.display = "none";
   }
 });
+
+const title_text = document.getElementById("title-text");
+document.addEventListener("mousemove", (event) => {
+  if (event.target === title_text) {
+    const rect = title_text.getBoundingClientRect();
+
+    const title_text_width = rect.right - rect.left;
+    const title_text_height = rect.bottom - rect.top;
+
+    const scaled_client_x = event.clientX - rect.left;
+    const scaled_client_y = event.clientY - rect.top;
+
+    const x_percent = scaled_client_x / title_text_width * 100;
+    const y_percent = scaled_client_y / title_text_height * 100;
+
+    title_text.style.background = `radial-gradient(circle at ${x_percent}% ${y_percent}%, #f2f2f2aa 20%, #757575aa 100%)`;
+  }
+})
