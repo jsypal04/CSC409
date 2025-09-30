@@ -1,6 +1,5 @@
 :root {
   --main-color: #A33636;
-  /*--text-color: #482703;*/
   --text-color: #7A1818;
   --paragraph-text-color: black;
   --background-color: #E6E6E6;
@@ -203,14 +202,15 @@ nav {
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 0;
 }
 
 #title-text {
-  position: absolute;
-  top: calc(50vh - (var(--title-text-container-height) / 2));
-  left: calc(50vw - (var(--title-text-container-width) / 2));
-
-  width: var(--title-text-container-width);
   height: var(--title-text-container-height);
 
   background: radial-gradient(
@@ -229,6 +229,18 @@ nav {
   align-items: center;
 
   z-index: 0;
+}
+
+@media screen and (min-width: 500px) {
+  #title-text {
+    width: var(--title-text-container-width);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #title-text {
+    width: 90vw;
+  }
 }
 
 @media (min-width: 900px) {
