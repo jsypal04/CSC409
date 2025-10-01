@@ -9,6 +9,7 @@
 
   --title-text-container-height: 150px;
   --title-text-container-width: 500px;
+  --title-container-height: calc(100vh - 90px);
 }
 
 
@@ -18,18 +19,24 @@ body {
   background-color: var(--background-color);
   font-family: "Roboto", sans-serif;
   font-size: 17px;
-  overflow-x: hidden;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: calc(var(--header-height) + 40px) 100vh 1fr var(--header-height);
+
 }
 
 header {
   position: fixed;
   top: 0;
   z-index: 5;
+
+  grid-column-start: 1;
+  grid-column-end: 3;
 }
 
 .head-and-foot {
   color: white;
-  height: var(--header-height);
   width: 100vw;
 }
 
@@ -40,6 +47,9 @@ main {
   padding-left: 20px;
   padding-right: 20px;
   padding-bottom: 20px;
+
+  grid-column-start: 2;
+  grid-row-start: 3;
 }
 
 section h2 {
@@ -56,11 +66,14 @@ footer {
   align-items: center;
 
   background: radial-gradient(circle at center, var(--main-color), black);
+
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 4;
 }
 
 nav {
   height: var(--header-height);
-  /*background-color: var(--main-color);*/
 
   background: radial-gradient(circle at center, var(--main-color), black);
 
@@ -129,10 +142,6 @@ nav {
   align-items: center;
 }
 
-/* .nav-text > *:hover {
-  background-color: #371d00;
-}*/
-
 #logo {
   height: var(--header-height);
 }
@@ -190,10 +199,6 @@ nav {
 }
 
 #progress-bar {
-  /*background-color: #50d12c;
-  width: 0%;
-  height: 20px;*/
-
   margin-left: -200px;
   height: 40px;
   width: 200px;
@@ -201,7 +206,6 @@ nav {
 
 #title-container {
   width: 100vw;
-  height: 100vh;
   background-image: url("images/steam_train_moving.gif");
   background-attachment: fixed;
   background-size: cover;
@@ -212,6 +216,10 @@ nav {
   align-items: center;
 
   z-index: 0;
+
+  grid-row-start: 2;
+  grid-column-start: 1;
+  grid-column-end: 3;
 }
 
 #title-text {
