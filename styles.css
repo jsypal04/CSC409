@@ -1,10 +1,14 @@
 :root {
-  --main-color: #4a291a;
-  --text-color: #482703;
-  --background-color: #fefaf6;
+  --main-color: #A33636;
+  --text-color: #7A1818;
+  --paragraph-text-color: black;
+  --background-color: #E6E6E6;
   --header-height: 50px;
   --large-screen-content-width: 900px;
   --small-screen-content-width: calc(100vw - 40px);
+
+  --title-text-container-height: 150px;
+  --title-text-container-width: 500px;
 }
 
 
@@ -18,12 +22,12 @@ body {
 }
 
 header {
-  position: sticky;
+  position: fixed;
   top: 0;
+  z-index: 5;
 }
 
 .head-and-foot {
-  background-color: var(--main-color);
   color: white;
   height: var(--header-height);
   width: 100vw;
@@ -38,15 +42,24 @@ main {
   padding-bottom: 20px;
 }
 
+section p {
+  color: var(--paragraph-text-color);
+}
+
 footer {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  background: radial-gradient(circle at center, var(--main-color), black);
 }
 
 nav {
   height: var(--header-height);
-  background-color: var(--main-color);
+  /*background-color: var(--main-color);*/
+
+  background: radial-gradient(circle at center, var(--main-color), black);
+
   position: relative;
   z-index: 5;
 }
@@ -127,7 +140,7 @@ nav {
 }
 
 #contents:hover {
-  background-color: #3a1f14;
+  background-color: #7A1818;
 }
 
 /* Animation for the table of contents */
@@ -180,6 +193,54 @@ nav {
   margin-left: -200px;
   height: 40px;
   width: 200px;
+}
+
+#title-container {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("images/steam_train_moving.gif");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 0;
+}
+
+#title-text {
+  height: var(--title-text-container-height);
+
+  background: radial-gradient(
+    circle at center,
+    #f2f2f2aa 20%,
+    #757575aa 100%
+  );
+  color: var(--text-color);
+  font-size: 2rem;
+  font-weight: bold;
+  border-radius: 20px;
+  border: 1px solid #d9dde1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 0;
+}
+
+@media screen and (min-width: 500px) {
+  #title-text {
+    width: var(--title-text-container-width);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #title-text {
+    width: 90vw;
+  }
 }
 
 @media (min-width: 900px) {
