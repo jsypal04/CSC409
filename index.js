@@ -60,3 +60,9 @@ document.addEventListener("mousemove", (event) => {
     title_text.style.background = `radial-gradient(circle at ${x_percent}% ${y_percent}%, #f2f2f2aa 20%, #757575aa 100%)`;
   }
 })
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && toc.style.display === "block") {
+    toc.style.display = "none";
+  }
+})
