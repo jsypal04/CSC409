@@ -1,0 +1,23 @@
+{
+  "name": "midterm-project",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/jsypal04/CSC409#readme",
+  "bugs": {
+    "url": "https://github.com/jsypal04/CSC409/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jsypal04/CSC409.git"
+  },
+  "license": "ISC",
+  "author": "Joe Sypal",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
